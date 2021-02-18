@@ -2,6 +2,7 @@ import cv2
 
 # import time
 
+
 # Load the Cascade Classifier
 car_cascade = cv2.CascadeClassifier("haarcascade_car.xml")
 
@@ -10,13 +11,16 @@ cap = cv2.VideoCapture('Traffic.mp4')
 
 while True:
 
+
     # time.sleep(0.2)
 
     # read image from webcam
     respose, color_img = cap.read()
 
     if respose == False:
+
         break
+
 
     # Convert to grayscale
     gray_img = cv2.cvtColor(color_img, cv2.COLOR_BGR2GRAY)
